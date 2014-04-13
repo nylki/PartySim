@@ -13,6 +13,16 @@ class Person {
 
   Person(String _name, PVector _location) {
     this.location = _location;
+    // check if initial position is very close to the table, then set it somewhere else
+    // this should run too often. so its alright we'll just try a new random location
+    // in other circumstances (bigger tables), we'd want to set the position differently to avoid
+    // very long loops
+    while(PVector.dist(table.getClosestTablePosition(location), location) < 50){
+      location = new PVector(random(width), random(height));
+    }
+      
+    
+    
     this.name = _name;
     c = color(random(255), random(255), random(255));
     idealDistances = new IntDict();
