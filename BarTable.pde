@@ -54,7 +54,7 @@ class BarTable {
   
   public void display(){
 
-   fill(255);
+   fill(200);
    shape(tableShape);
 
   }
