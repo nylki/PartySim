@@ -73,9 +73,7 @@ class Person {
     float idealDistance = idealDistances.get("table");
     PVector tablePosition = table.getClosestTablePosition(this.location);
     PVector direction = PVector.sub(tablePosition, this.location);
-
-    //float distance = direction.mag();
-    float distance = PVector.dist(tablePosition, this.location);
+    float distance = direction.mag();
     direction.normalize();
 
     // calculating the force. it will be towards a person, if the actual distance is higher than the ideal
@@ -102,15 +100,13 @@ class Person {
   void update() {
     acceleration.mult(0);
 
-    //for every other person add forces to either push or pull them
+    //for every other person add forces to either get closer or to move away
     for (Person p : persons) {
       if (p == this) continue;
 
       float idealDistance = idealDistances.get(p.name);
       PVector direction = PVector.sub(p.location, this.location);
-
-      //float distance = direction.mag();
-      float distance = PVector.dist(p.location, this.location);
+      float distance = direction.mag();
       direction.normalize();
 
       // calculating the force. it will be towards a person, if the actual distance is higher than the ideal
