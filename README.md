@@ -9,7 +9,7 @@ which results in dynamic movements of the guests.
 This simulation is inspired by Rich Gold's (Richard Goldstein) Party Planner from 1982,
 which used a 20x30 grid and plotted every simulation step onto a piece of paper.
 
-PartySim actually uses the ideal distance values of Rich Golds Program, aswell as the guests names.
+PartySim actually uses the ideal distance values and also the names of the guests from Rich Golds Program.
 For more info on the original Party Planner from 1982 see:
 
 * Richard Goldstein, The Plenitude, 2002, http://hci.stanford.edu/dschool/resources/ThePlenitude.pdf , p. 91-94
