@@ -1,6 +1,6 @@
 // copyright 2014: Tom Brewe
 // this file belongs to the project partySim
-// partyPlaner is licenced under GPL 3 (see LICENCE.txt)
+// partySim is licenced under GPL 3 (see LICENCE.txt)
 
 class Person {
   PVector location;
