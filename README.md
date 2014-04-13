@@ -15,4 +15,4 @@ PartySim (2014) uses the ideal distances of each guest (and also their names) fr
 For more info on the original Party Planner from 1982 see:
 
 * Richard Goldstein, The Plenitude, 2002, http://hci.stanford.edu/dschool/resources/ThePlenitude.pdf , p. 91-94
-* Ine Hinterwaldner, Das systemische Bild, Munich 2010, p. 214-221
+* Inge Hinterwaldner, Das systemische Bild, Munich 2010, p. 214-221
