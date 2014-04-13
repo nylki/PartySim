@@ -6,6 +6,8 @@ the table represents a common meeting place, like a barTable which generally att
 Each person likes to be in a certain distance to any of the other guests,
 which results in dynamic movements of the guests.
 
+![screenshot_partysim.png](https://raw.githubusercontent.com/nylki/PartySim/master/screenshot_partysim.png)
+
 This simulation is inspired by Rich Gold's (Richard Goldstein) Party Planner from 1982,
 which used a 20x30 grid and plotted every simulation step onto a piece of paper.
 
