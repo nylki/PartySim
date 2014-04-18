@@ -118,10 +118,10 @@ class Person {
       force.normalize();
       force.div(2300);
       
-      // collision handling
-      if(distance < radius + 5){
-          velocity.div(random(1, 1.1));
-          acceleration.mult(-0.004);
+      // guest collision handling
+      if(distance < radius + 10){
+          velocity.div(random(1, 1.05));
+          acceleration.mult(-0.002);
       }
       
       acceleration.add(force);
