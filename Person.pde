@@ -10,7 +10,7 @@ class Person {
   String name;
   color c;
   float heading;
-  int radius = 15;
+  int diameter = 15;
 
   Person(String _name, PVector _location) {
     this.location = _location;
@@ -39,9 +39,9 @@ class Person {
     text(name, 0, 15);
     rotate(heading);
     fill(c);
-    ellipse(0, 0, radius, radius);
+    ellipse(0, 0, diameter, diameter);
     fill(200, 100, 100);
-    ellipse(5, 0, radius - 5, radius-5);
+    ellipse(5, 0, diameter - 5, diameter-5);
 
     popMatrix();
   }
@@ -119,7 +119,7 @@ class Person {
       force.div(2300);
       
       // guest collision handling
-      if(distance < radius + 10){
+      if(distance < diameter + 10){
           velocity.div(random(1, 1.05));
           acceleration.mult(-0.002);
       }
