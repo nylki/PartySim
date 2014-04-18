@@ -24,7 +24,7 @@ BarTable table;
 void setup(){
   size(600,400, P2D);
   smooth(5);
-  frameRate(600);
+  frameRate(60);
  
   // multiplying original values from Rich Gold's table with 20
  // relations are still the same 
