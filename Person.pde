@@ -86,7 +86,7 @@ class Person {
 
     force.normalize();
     // table has more influence on position than other people
-    force.div(2000);
+    force.div(1350);
 
 
     acceleration.add(force);
@@ -115,14 +115,14 @@ class Person {
       float delta = (distance - idealDistance) + 1; // +1 to avoid multiplikation by 0
       PVector force = PVector.mult(direction, delta);
       force.normalize();
-      force.div(2500);
+      force.div(2300);
       acceleration.add(force);
     }
     checkTable();
     checkWalls();
     velocity.add(acceleration);
     // limit walking speed
-    velocity.limit(0.35);
+    velocity.limit(0.2);
 
     location.add(velocity);
     heading = velocity.heading();
