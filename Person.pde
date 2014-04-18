@@ -10,6 +10,7 @@ class Person {
   String name;
   color c;
   float heading;
+  int radius = 15;
 
   Person(String _name, PVector _location) {
     this.location = _location;
@@ -38,9 +39,9 @@ class Person {
     text(name, 0, 15);
     rotate(heading);
     fill(c);
-    ellipse(0, 0, 15, 15);
+    ellipse(0, 0, radius, radius);
     fill(200, 100, 100);
-    ellipse(5, 0, 10, 10);
+    ellipse(5, 0, radius - 5, radius-5);
 
     popMatrix();
   }
@@ -116,13 +117,20 @@ class Person {
       PVector force = PVector.mult(direction, delta);
       force.normalize();
       force.div(2300);
+      
+      // collision handling
+      if(distance < radius + 5){
+          velocity.div(random(1, 1.1));
+          acceleration.mult(-0.004);
+      }
+      
       acceleration.add(force);
     }
     checkTable();
     checkWalls();
     velocity.add(acceleration);
     // limit walking speed
-    velocity.limit(0.2);
+    velocity.limit(0.3);
 
     location.add(velocity);
     heading = velocity.heading();
