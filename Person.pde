@@ -89,8 +89,8 @@ class Person {
     // table has more influence on position than other people
     force.div(1350);
     // if too close to table accelerate away
-    if (distance < 10) {
-      force.mult(10);
+    if (distance < 25) {
+      force.mult(4);
     }
 
     acceleration.add(force);
@@ -122,7 +122,7 @@ class Person {
       // simply strengthen the force that is going to reject each other (as the ideal
       // distance is always smaller)
       
-      force.mult(10);
+      force.mult(8);
     }
       
       acceleration.add(force);
@@ -137,7 +137,7 @@ class Person {
 
     velocity.add(acceleration);
     // limit walking speed
-    velocity.limit(0.3);
+    velocity.limit(0.275);
 
     location.add(velocity);
     heading = velocity.heading();
