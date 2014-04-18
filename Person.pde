@@ -18,12 +18,12 @@ class Person {
     // this should run too often. so its alright we'll just try a new random location
     // in other circumstances (bigger tables), we'd want to set the position differently to avoid
     // very long loops
-    while(PVector.dist(table.getClosestTablePosition(location), location) < 50){
+    while (PVector.dist (table.getClosestTablePosition (location), location) < 50) {
       location = new PVector(random(width), random(height));
     }
-      
-    
-    
+
+
+
     this.name = _name;
     c = color(random(255), random(255), random(255));
     idealDistances = new IntDict();
@@ -88,14 +88,13 @@ class Person {
     force.normalize();
     // table has more influence on position than other people
     force.div(1350);
-
-
-    acceleration.add(force);
     // if too close to table accelerate away
     if (distance < 10) {
-      velocity.div(random(1, 1.3));
-      acceleration.add(PVector.mult(direction, -0.005));
+      force.mult(10);
     }
+
+    acceleration.add(force);
+
   }
 
   void update() {
@@ -118,16 +117,24 @@ class Person {
       force.normalize();
       force.div(2300);
       
-      // guest collision handling
-      if(distance < diameter + 10){
-          velocity.div(random(1, 1.05));
-          acceleration.mult(-0.002);
-      }
+    // guest collision handling
+    if (distance < diameter + 10) {
+      // simply strengthen the force that is going to reject each other (as the ideal
+      // distance is always smaller)
+      
+      force.mult(10);
+    }
       
       acceleration.add(force);
+      
+
     }
+    
+    //table attraction 
     checkTable();
+    // wall collision handling
     checkWalls();
+
     velocity.add(acceleration);
     // limit walking speed
     velocity.limit(0.3);
@@ -136,3 +143,4 @@ class Person {
     heading = velocity.heading();
   }
 }
+
