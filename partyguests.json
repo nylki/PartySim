@@ -1,0 +1,83 @@
+{
+	"arthur":
+	[
+		["bernie", 300],
+		["dennis", 140],
+		["millie", 40],
+		["penelope", 120],
+		["susan", 180],
+		["viola", 80],
+		["wally", 240],
+		["table", 20]
+	],
+	"bernie": [
+		["arthur", 160],
+		["dennis", 120],
+		["millie", 80],
+		["penelope", 120],
+		["susan", 60],
+		["viola", 40],
+		["wally", 200],
+		["table", 20]
+	],
+	"dennis": [
+		["arthur", 220],
+		["bernie", 80],
+		["millie", 100],
+		["penelope", 240],
+		["susan", 40],
+		["viola", 180],
+		["wally", 120],
+		["table", 20]
+	],
+	"millie": [
+		["arthur", 220],
+		["bernie", 80],
+		["dennis", 100],
+		["penelope", 240],
+		["susan", 40],
+		["viola", 180],
+		["wally", 120],
+		["table", 100]
+	],
+	"penelope": [
+		["arthur", 60],
+		["bernie", 200],
+		["dennis", 100],
+		["millie", 240],
+		["susan", 220],
+		["viola", 140],
+		["wally", 300],
+		["table", 100]
+	],
+	"susan": [
+		["arthur", 240],
+		["bernie", 40],
+		["dennis", 80],
+		["millie", 160],
+		["penelope", 100],
+		["viola", 240],
+		["wally", 80],
+		["table", 20]
+	],
+	"viola": [
+		["arthur", 140],
+		["bernie", 160],
+		["dennis", 240],
+		["millie", 200],
+		["penelope", 80],
+		["susan", 260],
+		["wally", 60],
+		["table", 100]
+	],
+	"wally": [
+		["arthur", 120],
+		["bernie", 140],
+		["dennis", 160],
+		["millie", 120],
+		["penelope", 60],
+		["susan", 160],
+		["viola", 180],
+		["table", 100]
+	]
+}
