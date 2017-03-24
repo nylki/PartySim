@@ -1,8 +1,8 @@
 PartySim
 ========
 
-This simulation, written in processing, simulates a party.
-the table represents a common meeting place, like a barTable which generally attracts guests.
+This is a simple simulation of group dynamics.
+the table represents a common meeting place, like a bar or food table which generally attracts guests.
 Each person likes to be in a certain distance to any of the other guests,
 which results in dynamic movements of the guests.
 
